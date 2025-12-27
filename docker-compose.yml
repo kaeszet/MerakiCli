@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  meraki-cli:
+    build: .
+    environment:
+      MERAKI_DASHBOARD_API_KEY: "${MERAKI_DASHBOARD_API_KEY}"
+    entrypoint: ["python", "meraki_cli.py"]
+    command: ["hello"]
